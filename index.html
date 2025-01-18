@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Projects</title>
+</head>
+<body>
+    <h1>Display data</h1>
+    <pre id="output"></pre>
+
+    <script>
+        const projects = [
+            {
+                name: "SocialHub",
+                description: "A social media app for sharing posts.",
+                technologyUsed: ["Flutter", "Firebase"],
+                year: 2024
+            },
+            {
+                name: "TaskMaster",
+                description: "A task management tool for teams.",
+                technologyUsed: ["React", "MongoDB"],
+                year: 2023
+            },
+            {
+                name: "Web developer",
+                description: "Build website.",
+                technologyUsed: ["HTML", "CSS", "JavaScript"],
+                year: 2023
+            },
+            {
+                name: "Student",
+                description: "An online learning platform.",
+                technologyUsed: ["Angular", "node.js", "javascript"],
+                year: 2022
+            }
+        ];
+        const output = projects.map(project => {
+            return `Project_Name: ${project.name}\nDescription: ${project.description}\nTechnology Used: ${project.technologyUsed.join(", ")}\nYear: ${project.year}\n-----------------------------------`;
+        }).join("\n");
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>
